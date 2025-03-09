@@ -1,0 +1,6 @@
+<?
+
+$Cookie = "PHPSESSID=82381c1211fbf0b9d60a24da50a510d5; _ga=GA1.1.871432179.1741514781; _ga_3D679CLV53=GS1.1.1741514780.1.1.1741514789.0.0.0; a=6GTwz6WpKRTUJL72lcxWDXMoXArsXczB";
+
+
+$UserAgent = "Mozilla/5.0 (Linux; Android 11; RMX3195) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.66 Mobile Safari/537.36";
