@@ -103,6 +103,10 @@ $y2 = "\033[01;38;5;226m";
 $y3 = "\033[01;38;5;228m";
 
 $termux = $r3 . "♥";
+$hh = $green2 . "💚";
+$kh = $y2 . "💛";
+$bh = $lblue2 . "💙";
+$uh = $purple2 . "💜";
 /* END COLOR */
 
 function Save($namadata)
@@ -110,7 +114,9 @@ function Save($namadata)
     if (file_exists($namadata)) {
         $data = file_get_contents($namadata);
     } else {
-        bn();
+        // bn();
+        an($lblue2."Your Email Faucetpay"."\n");
+        fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         $data = readline(p . " Input " . $namadata . " : " . h);
         file_put_contents($namadata, $data);
     }
@@ -155,6 +161,20 @@ function timer($tmr)
         echo $putiht . "[" . $warna[array_rand($warna)] . "•••" . $putiht . "] " . gmdate("H:i:s", $res);
         sleep(1);
     endwhile;
+}
+
+function sisaWaktu($durasi) {
+    $jam = floor($durasi / 3600);
+    $menit = floor(($durasi % 3600) / 60);
+    $detik = $durasi % 60;
+    
+    if ($jam > 0) {
+        return "$jam jam $menit menit $detik detik";
+    } elseif ($menit > 0) {
+        return "$menit menit $detik detik";
+    } else {
+        return "$detik detik";
+    }
 }
 
 function get($url)
@@ -297,19 +317,19 @@ $xrp = explode('</td>', explode('<td>', $db)[34])[0];
 $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
 
 an($lblue2."Welcome Back Bossque 😎"."\n");
-an($lblue2."Your Balance"."\n\n");
+an($lblue2."Your Balance"."\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-echo $lblue2."$ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
+echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
 echo"\n";
-echo $yellow."$dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
+echo $yellow." $dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
 echo"\n";
-echo $lblue."$usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
+echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
 echo"\n";
-echo $abu2."$dash".$putih2."$abu2 $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
+echo $Icyan." $dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
 echo"\n";
-echo $IYellow."$zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
+echo $IYellow." $zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
 echo"\n";
-echo $purple2."$bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
+echo $purple2." $bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
 echo"\n";
 
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
@@ -318,16 +338,23 @@ an($purple2 . "『2』Update Email\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
 $pilih = 1;
 // $pilih = readline($red2 . "CHOOSE YOUR NUMBER: ");
-fast($red2 . "CHOOSE YOUR NUMBER: " . $pilih . $end . "\n");
+fast($red2 . " CHOOSE YOUR NUMBER: " . $pilih . $end . "\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
 
 if ($pilih == 1) {
     Midori:
     while (true) {
         $faucet = get(dashboard);
-        $durasi = explode(");", explode('clock.setTime(', $faucet)[1])[0];
+        $explodeResult = explode('clock.setTime(', $faucet);
+        
+        if (isset($explodeResult[1])) {
+            $durasi = explode(");", $explodeResult[1])[0];
+        } else {
+            $durasi = 0; // Default jika tidak ditemukan
+        }
         timer(60);
-        if ($durasi == null) {
+
+        if ($durasi == 0) {
             echo $red2 . "🚫 Attention !! Your Energy Is Running Out \n";
             echo $red2 . "⚡ complete the shortlink on the website" . $y2 . "\n";
             exit;
@@ -371,19 +398,21 @@ if ($pilih == 1) {
         $xrp = explode('</td>', explode('<td>', $db)[34])[0];
         $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
 
-        echo $purple2 . "$termux" . $green . " UPDATE BALANCE\n";
+        echo $purple2 . " $termux" . $green . " UPDATE BALANCE \n";
+        echo $purple2 . " $hh" . $green . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
+        echo $purple2 . " $bh" . $green . " HOST " . host . "\n";
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        echo $lblue2."$ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
+        echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
         echo"\n";
-        echo $yellow."$dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
+        echo $yellow." $dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
         echo"\n";
-        echo $lblue."$usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
+        echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
         echo"\n";
-        echo $abu2."$dash".$putih2."$abu2 $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
+        echo $Icyan." $dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
         echo"\n";
-        echo $IYellow."$zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
+        echo $IYellow." $zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
         echo"\n";
-        echo $purple2."$bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
+        echo $purple2." $bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
         echo"\n";
 
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
