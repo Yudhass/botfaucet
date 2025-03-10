@@ -324,7 +324,7 @@ echo $lblue2." $doge".$putih2."$lblue2 $doge2";  echo $green2."     $dgb".$putih
 echo"\n";
 echo $yellow." $trx".$putih2."$yellow  $trx2";  echo $purple."     $usdt".$putih2."$purple  $usdt2";
 echo"\n";
-echo $lblue." $ada".$putih2."$lblue  $ada2";  echo $cyan."     $fey".$putih2."$cyan   $fey2";
+echo $lblue." $ada".$putih2."$lblue   $ada2";  echo $cyan."     $fey".$putih2."$cyan   $fey2";
 echo"\n";
 echo $Icyan." $ton".$putih2."$Icyan  $ton2";  echo $red2."     $xrp".$putih2."$red2   $xrp2";
 echo"\n";
