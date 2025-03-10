@@ -316,8 +316,9 @@ $bnb2 = explode('</td>', explode('<td>', $db)[32])[0];
 $xrp = explode('</td>', explode('<td>', $db)[34])[0];
 $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
 
-an($lblue2."Welcome Back Bossque 😎"."\n");
-an($lblue2."Your Balance"."\n");
+an($lblue2." Welcome Back Bossque 😎"."\n");
+an($lblue2." Your Balance"."\n");
+an($lblue2." Host ". host."\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
 echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
 echo"\n";

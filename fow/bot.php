@@ -240,8 +240,8 @@ const
     host = "fowcy.xyz",
     login = "https://fowcy.xyz",
     logver = "https://fowcy.xyz/check.php",
-    dashboard = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=1&DASH=1&FEY=1&ZEC=1&SOL=1&XRP=1&redirect=1",
-    verif = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=1&DASH=1&FEY=1&ZEC=1&SOL=1&XRP=1&redirect=1",
+    dashboard = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=1&DASH=1&FEY=1&ZEC=1&SOL=1&XRP=1&ADA=1&TON=1&redirect=1",
+    verif = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=1&DASH=1&FEY=1&ZEC=1&SOL=1&XRP=1&ADA=1&TON=1&redirect=1",
     wd = "https://fowcy.xyz/account.php",
     wdver = "https://fowcy.xyz/account.php",
     url = "https://fowcy.xyz";
@@ -280,56 +280,58 @@ gas:
 // bn(host, 1);
 menu:
 $db = get(wd);
-$ltc = explode('</td>', explode('<td>', $db)[1])[0];
-$ltc2 = explode('</td>', explode('<td>', $db)[2])[0];
+// echo $db;
+$doge = explode('</td>', explode('<td>', $db)[1])[0];
+$doge2 = explode('</td>', explode('<td>', $db)[2])[0];
 
-$doge = explode('</td>', explode('<td>', $db)[4])[0];
-$doge2 = explode('</td>', explode('<td>', $db)[5])[0];
+$dgb = explode('</td>', explode('<td>', $db)[4])[0];
+$dgb2 = explode('</td>', explode('<td>', $db)[5])[0];
 
-$dgb = explode('</td>', explode('<td>', $db)[7])[0];
-$dgb2 = explode('</td>', explode('<td>', $db)[8])[0];
+$trx = explode('</td>', explode('<td>', $db)[7])[0];
+$trx2 = explode('</td>', explode('<td>', $db)[8])[0];
 
-$trx = explode('</td>', explode('<td>', $db)[10])[0];
-$trx2 = explode('</td>', explode('<td>', $db)[11])[0];
+$usdt = explode('</td>', explode('<td>', $db)[10])[0];
+$usdt2 = explode('</td>', explode('<td>', $db)[11])[0];
 
-$usdt = explode('</td>', explode('<td>', $db)[13])[0];
-$usdt2 = explode('</td>', explode('<td>', $db)[14])[0];
+$dash = explode('</td>', explode('<td>', $db)[13])[0];
+$dash2 = explode('</td>', explode('<td>', $db)[14])[0];
 
-$bch = explode('</td>', explode('<td>', $db)[16])[0];
-$bch2 = explode('</td>', explode('<td>', $db)[17])[0];
+$fey = explode('</td>', explode('<td>', $db)[16])[0];
+$fey2 = explode('</td>', explode('<td>', $db)[17])[0];
 
-$dash = explode('</td>', explode('<td>', $db)[19])[0];
-$dash2 = explode('</td>', explode('<td>', $db)[20])[0];
+$zec = explode('</td>', explode('<td>', $db)[19])[0];
+$zec2 = explode('</td>', explode('<td>', $db)[20])[0];
 
-$fey = explode('</td>', explode('<td>', $db)[22])[0];
-$fey2 = explode('</td>', explode('<td>', $db)[23])[0];
+$sol = explode('</td>', explode('<td>', $db)[22])[0];
+$sol2 = explode('</td>', explode('<td>', $db)[23])[0];
 
-$zec = explode('</td>', explode('<td>', $db)[25])[0];
-$zec2 = explode('</td>', explode('<td>', $db)[26])[0];
+$matic = explode('</td>', explode('<td>', $db)[25])[0];
+$matic2 = explode('</td>', explode('<td>', $db)[26])[0];
 
-$sol = explode('</td>', explode('<td>', $db)[28])[0];
-$sol2 = explode('</td>', explode('<td>', $db)[29])[0];
+$xrp = explode('</td>', explode('<td>', $db)[28])[0];
+$xrp2 = explode('</td>', explode('<td>', $db)[29])[0];
 
-$bnb = explode('</td>', explode('<td>', $db)[31])[0];
-$bnb2 = explode('</td>', explode('<td>', $db)[32])[0];
+$ada = explode('</td>', explode('<td>', $db)[31])[0];
+$ada2 = explode('</td>', explode('<td>', $db)[32])[0];
 
-$xrp = explode('</td>', explode('<td>', $db)[34])[0];
-$xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
+$ton = explode('</td>', explode('<td>', $db)[34])[0];
+$ton2 = explode('</td>', explode('<td>', $db)[35])[0];
 
-an($lblue2."Welcome Back Bossque 😎"."\n");
-an($lblue2."Your Balance"."\n");
+an($lblue2." Welcome Back Bossque 😎"."\n");
+an($lblue2." Your Balance"."\n");
+an($lblue2." Host ". host ."\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
+echo $lblue2." $doge".$putih2."$lblue2  $doge2";  echo $green2."     $dgb".$putih2."$green2   $dgb2";
 echo"\n";
-echo $yellow." $dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
+echo $yellow." $trx".$putih2."$yellow   $trx2";  echo $purple."     $usdt".$putih2."$purple  $usdt2";
 echo"\n";
-echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
+echo $lblue." $dash".$putih2."$lblue  $dash2";  echo $cyan."     $fey".$putih2."$cyan   $fey2";
 echo"\n";
-echo $Icyan." $dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
+echo $Icyan." $zec".$putih2."$Icyan   $zec2";  echo $red2."     $sol".$putih2."$red2   $sol2";
 echo"\n";
-echo $IYellow." $zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
+echo $IYellow." $matic".$putih2."$IYellow $matic2";  echo $IRed."     $xrp".$putih2."$IRed   $xrp2";
 echo"\n";
-echo $purple2." $bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
+echo $purple2." $ada".$putih2."$purple2   $ada2";  echo $IGreen."     $ton".$putih2."$IGreen   $ton2";
 echo"\n";
 
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
@@ -362,57 +364,57 @@ if ($pilih == 1) {
         }
         $db = get(wd);
         
-        $ltc = explode('</td>', explode('<td>', $db)[1])[0];
-        $ltc2 = explode('</td>', explode('<td>', $db)[2])[0];
+        $doge = explode('</td>', explode('<td>', $db)[1])[0];
+        $doge2 = explode('</td>', explode('<td>', $db)[2])[0];
 
-        $doge = explode('</td>', explode('<td>', $db)[4])[0];
-        $doge2 = explode('</td>', explode('<td>', $db)[5])[0];
+        $dgb = explode('</td>', explode('<td>', $db)[4])[0];
+        $dgb2 = explode('</td>', explode('<td>', $db)[5])[0];
 
-        $dgb = explode('</td>', explode('<td>', $db)[7])[0];
-        $dgb2 = explode('</td>', explode('<td>', $db)[8])[0];
+        $trx = explode('</td>', explode('<td>', $db)[7])[0];
+        $trx2 = explode('</td>', explode('<td>', $db)[8])[0];
 
-        $trx = explode('</td>', explode('<td>', $db)[10])[0];
-        $trx2 = explode('</td>', explode('<td>', $db)[11])[0];
+        $usdt = explode('</td>', explode('<td>', $db)[10])[0];
+        $usdt2 = explode('</td>', explode('<td>', $db)[11])[0];
 
-        $usdt = explode('</td>', explode('<td>', $db)[13])[0];
-        $usdt2 = explode('</td>', explode('<td>', $db)[14])[0];
+        $dash = explode('</td>', explode('<td>', $db)[13])[0];
+        $dash2 = explode('</td>', explode('<td>', $db)[14])[0];
 
-        $bch = explode('</td>', explode('<td>', $db)[16])[0];
-        $bch2 = explode('</td>', explode('<td>', $db)[17])[0];
+        $fey = explode('</td>', explode('<td>', $db)[16])[0];
+        $fey2 = explode('</td>', explode('<td>', $db)[17])[0];
 
-        $dash = explode('</td>', explode('<td>', $db)[19])[0];
-        $dash2 = explode('</td>', explode('<td>', $db)[20])[0];
+        $zec = explode('</td>', explode('<td>', $db)[19])[0];
+        $zec2 = explode('</td>', explode('<td>', $db)[20])[0];
 
-        $fey = explode('</td>', explode('<td>', $db)[22])[0];
-        $fey2 = explode('</td>', explode('<td>', $db)[23])[0];
+        $sol = explode('</td>', explode('<td>', $db)[22])[0];
+        $sol2 = explode('</td>', explode('<td>', $db)[23])[0];
 
-        $zec = explode('</td>', explode('<td>', $db)[25])[0];
-        $zec2 = explode('</td>', explode('<td>', $db)[26])[0];
+        $matic = explode('</td>', explode('<td>', $db)[25])[0];
+        $matic2 = explode('</td>', explode('<td>', $db)[26])[0];
 
-        $sol = explode('</td>', explode('<td>', $db)[28])[0];
-        $sol2 = explode('</td>', explode('<td>', $db)[29])[0];
+        $xrp = explode('</td>', explode('<td>', $db)[28])[0];
+        $xrp2 = explode('</td>', explode('<td>', $db)[29])[0];
 
-        $bnb = explode('</td>', explode('<td>', $db)[31])[0];
-        $bnb2 = explode('</td>', explode('<td>', $db)[32])[0];
+        $ada = explode('</td>', explode('<td>', $db)[31])[0];
+        $ada2 = explode('</td>', explode('<td>', $db)[32])[0];
 
-        $xrp = explode('</td>', explode('<td>', $db)[34])[0];
-        $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
+        $ton = explode('</td>', explode('<td>', $db)[34])[0];
+        $ton2 = explode('</td>', explode('<td>', $db)[35])[0];
 
-        echo $purple2 . " $termux" . $green . " UPDATE BALANCE \n";
-        echo $purple2 . " $hh" . $green . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
+        echo $purple2 . " $hh" . $green . " UPDATE BALANCE \n";
+        echo $purple2 . " $kh" . $green . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
         echo $purple2 . " $bh" . $green . " HOST " . host . "\n";
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
+        echo $lblue2." $doge".$putih2."$lblue2  $doge2";  echo $green2."     $dgb".$putih2."$green2   $dgb2";
         echo"\n";
-        echo $yellow." $dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
+        echo $yellow." $trx".$putih2."$yellow   $trx2";  echo $purple."     $usdt".$putih2."$purple  $usdt2";
         echo"\n";
-        echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
+        echo $lblue." $dash".$putih2."$lblue  $dash2";  echo $cyan."     $fey".$putih2."$cyan   $fey2";
         echo"\n";
-        echo $Icyan." $dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
+        echo $Icyan." $zec".$putih2."$Icyan   $zec2";  echo $red2."     $sol".$putih2."$red2   $sol2";
         echo"\n";
-        echo $IYellow." $zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
+        echo $IYellow." $matic".$putih2."$IYellow $matic2";  echo $IRed."     $xrp".$putih2."$IRed   $xrp2";
         echo"\n";
-        echo $purple2." $bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
+        echo $purple2." $ada".$putih2."$purple2   $ada2";  echo $IGreen."     $ton".$putih2."$IGreen   $ton2";
         echo"\n";
 
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
