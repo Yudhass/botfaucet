@@ -418,19 +418,11 @@ if ($pilih == 1) {
         echo"\n";
 
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        if ($ltc2 > "1.00000000") {
-            $link = get(wd);
-            $data = "ltc=withdraw";
-            $wd = post(wd, $data);
-            echo "{$y2} SUCCES SEND $ltc2 $ltc TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
         if ($doge2 > "1.00000000") {
             $link = get(wd);
             $data = "doge=withdraw";
             $wd = post(wd, $data);
-            echo "{$lblue2} SUCCES SEND $doge2 $doge TO FAUCETPAY\n";
+            echo "{$y2} SUCCES SEND $doge2 $doge TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
@@ -438,7 +430,7 @@ if ($pilih == 1) {
             $link = get(wd);
             $data = "dgb=withdraw";
             $wd = post(wd, $data);
-            echo "{$red2} SUCCES SEND $dgb2 $dgb TO FAUCETPAY\n";
+            echo "{$lblue2} SUCCES SEND $dgb2 $dgb TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
@@ -446,31 +438,23 @@ if ($pilih == 1) {
             $link = get(wd);
             $data = "trx=withdraw";
             $wd = post(wd, $data);
-            echo "{$green2} SUCCES SEND $trx2 $trx TO FAUCETPAY\n";
+            echo "{$red2} SUCCES SEND $trx2 $trx TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($usdt2 == "1.00000000") {
+        if ($usdt2 > "1.00000000") {
             $link = get(wd);
             $data = "usdt=withdraw";
             $wd = post(wd, $data);
-            echo "{$y2} SUCCES SEND $usdt2 $usdt TO FAUCETPAY\n";
+            echo "{$green2} SUCCES SEND $usdt2 $usdt TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($bch2 > "1.00000000") {
-            $link = get(wd);
-            $data = "bch=withdraw";
-            $wd = post(wd, $data);
-            echo "{$purple2} SUCCES SEND $bch2 $bch TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
-        if ($dash2 > "1.00000000") {
+        if ($dash2 == "1.00000000") {
             $link = get(wd);
             $data = "dash=withdraw";
             $wd = post(wd, $data);
-            echo "{$lblue2} SUCCES SEND $dash2 $dash TO FAUCETPAY\n";
+            echo "{$y2} SUCCES SEND $dash2 $dash TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
@@ -486,7 +470,7 @@ if ($pilih == 1) {
             $link = get(wd);
             $data = "zec=withdraw";
             $wd = post(wd, $data);
-            echo "{$green2} SUCCES SEND $zec2 $zec TO FAUCETPAY\n";
+            echo "{$lblue2} SUCCES SEND $zec2 $zec TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
@@ -494,15 +478,15 @@ if ($pilih == 1) {
             $link = get(wd);
             $data = "sol=withdraw";
             $wd = post(wd, $data);
-            echo "{$putih2} SUCCES SEND $sol2 $sol TO FAUCETPAY\n";
+            echo "{$purple2} SUCCES SEND $sol2 $sol TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($bnb2 > "1.00000000") {
+        if ($matic2 > "1.00000000") {
             $link = get(wd);
-            $data = "bnb=withdraw";
+            $data = "matic=withdraw";
             $wd = post(wd, $data);
-            echo "{$putih2} SUCCES SEND $bnb2 $bnb TO FAUCETPAY\n";
+            echo "{$green2} SUCCES SEND $matic2 $matic TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
@@ -511,6 +495,22 @@ if ($pilih == 1) {
             $data = "xrp=withdraw";
             $wd = post(wd, $data);
             echo "{$putih2} SUCCES SEND $xrp2 $xrp TO FAUCETPAY\n";
+            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
+        } else {
+        }
+        if ($ada2 > "1.00000000") {
+            $link = get(wd);
+            $data = "ada=withdraw";
+            $wd = post(wd, $data);
+            echo "{$putih2} SUCCES SEND $ada2 $ada TO FAUCETPAY\n";
+            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
+        } else {
+        }
+        if ($ton2 > "1.00000000") {
+            $link = get(wd);
+            $data = "ton=withdraw";
+            $wd = post(wd, $data);
+            echo "{$putih2} SUCCES SEND $ton2 $ton TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
