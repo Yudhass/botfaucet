@@ -302,11 +302,9 @@ $fey2 = explode('</td>', explode('<td>', $db)[17])[0];
 $zec = explode('</td>', explode('<td>', $db)[19])[0];
 $zec2 = explode('</td>', explode('<td>', $db)[20])[0];
 
-$sol = explode('</td>', explode('<td>', $db)[22])[0];
-$sol2 = explode('</td>', explode('<td>', $db)[23])[0];
+// sol
 
-$matic = explode('</td>', explode('<td>', $db)[25])[0];
-$matic2 = explode('</td>', explode('<td>', $db)[26])[0];
+//matic
 
 $xrp = explode('</td>', explode('<td>', $db)[28])[0];
 $xrp2 = explode('</td>', explode('<td>', $db)[29])[0];
@@ -327,9 +325,7 @@ echo $yellow." $trx".$putih2."$yellow   $trx2";  echo $purple."     $usdt".$puti
 echo"\n";
 echo $lblue." $dash".$putih2."$lblue  $dash2";  echo $cyan."     $fey".$putih2."$cyan   $fey2";
 echo"\n";
-echo $Icyan." $zec".$putih2."$Icyan   $zec2";  echo $red2."     $sol".$putih2."$red2   $sol2";
-echo"\n";
-echo $IYellow." $matic".$putih2."$IYellow $matic2";  echo $IRed."     $xrp".$putih2."$IRed   $xrp2";
+echo $Icyan." $zec".$putih2."$Icyan   $zec2";  echo $red2."     $xrp".$putih2."$red2   $xrp2";
 echo"\n";
 echo $purple2." $ada".$putih2."$purple2   $ada2";  echo $IGreen."     $ton".$putih2."$IGreen   $ton2";
 echo"\n";
@@ -385,12 +381,6 @@ if ($pilih == 1) {
         $zec = explode('</td>', explode('<td>', $db)[19])[0];
         $zec2 = explode('</td>', explode('<td>', $db)[20])[0];
 
-        $sol = explode('</td>', explode('<td>', $db)[22])[0];
-        $sol2 = explode('</td>', explode('<td>', $db)[23])[0];
-
-        $matic = explode('</td>', explode('<td>', $db)[25])[0];
-        $matic2 = explode('</td>', explode('<td>', $db)[26])[0];
-
         $xrp = explode('</td>', explode('<td>', $db)[28])[0];
         $xrp2 = explode('</td>', explode('<td>', $db)[29])[0];
 
@@ -410,9 +400,7 @@ if ($pilih == 1) {
         echo"\n";
         echo $lblue." $dash".$putih2."$lblue  $dash2";  echo $cyan."     $fey".$putih2."$cyan   $fey2";
         echo"\n";
-        echo $Icyan." $zec".$putih2."$Icyan   $zec2";  echo $red2."     $sol".$putih2."$red2   $sol2";
-        echo"\n";
-        echo $IYellow." $matic".$putih2."$IYellow $matic2";  echo $IRed."     $xrp".$putih2."$IRed   $xrp2";
+        echo $Icyan." $zec".$putih2."$Icyan   $zec2";  echo $red2."     $xrp".$putih2."$red2   $xrp2";
         echo"\n";
         echo $purple2." $ada".$putih2."$purple2   $ada2";  echo $IGreen."     $ton".$putih2."$IGreen   $ton2";
         echo"\n";
@@ -471,22 +459,6 @@ if ($pilih == 1) {
             $data = "zec=withdraw";
             $wd = post(wd, $data);
             echo "{$lblue2} SUCCES SEND $zec2 $zec TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
-        if ($sol2 > "1.00000000") {
-            $link = get(wd);
-            $data = "sol=withdraw";
-            $wd = post(wd, $data);
-            echo "{$purple2} SUCCES SEND $sol2 $sol TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
-        if ($matic2 > "1.00000000") {
-            $link = get(wd);
-            $data = "matic=withdraw";
-            $wd = post(wd, $data);
-            echo "{$green2} SUCCES SEND $matic2 $matic TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
