@@ -110,7 +110,9 @@ function Save($namadata)
     if (file_exists($namadata)) {
         $data = file_get_contents($namadata);
     } else {
-        bn();
+        // bn();
+        an($lblue2."Your Email Faucetpay"."\n");
+        fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         $data = readline(p . " Input " . $namadata . " : " . h);
         file_put_contents($namadata, $data);
     }
@@ -394,8 +396,8 @@ if ($pilih == 1) {
 
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         echo $purple2 . "$termux" . $green . " UPDATE BALANCE \n";
-        echo $purple2 . "$termux" . $green . "SISA WAKTU " . sisaWaktu($durasi) . "\n";
-        echo $purple2 . "$termux" . $green . "HOST " . host . "\n";
+        echo $purple2 . "$termux" . $green . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
+        echo $purple2 . "$termux" . $green . " HOST " . host . "\n";
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         echo $lblue2."$ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
         echo"\n";
