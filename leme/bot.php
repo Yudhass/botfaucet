@@ -394,7 +394,6 @@ if ($pilih == 1) {
         $xrp = explode('</td>', explode('<td>', $db)[34])[0];
         $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
 
-        fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         echo $purple2 . "$termux" . $green . " UPDATE BALANCE \n";
         echo $purple2 . "$termux" . $green . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
         echo $purple2 . "$termux" . $green . " HOST " . host . "\n";
