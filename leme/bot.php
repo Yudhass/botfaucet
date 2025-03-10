@@ -325,9 +325,16 @@ if ($pilih == 1) {
     Midori:
     while (true) {
         $faucet = get(dashboard);
-        $durasi = explode(");", explode('clock.setTime(', $faucet)[1])[0];
+        $explodeResult = explode('clock.setTime(', $faucet);
+        
+        if (isset($explodeResult[1])) {
+            $durasi = explode(");", $explodeResult[1])[0];
+        } else {
+            $durasi = 0; // Default jika tidak ditemukan
+        }
         timer(60);
-        if ($durasi == null) {
+
+        if ($durasi == 0) {
             echo $red2 . "🚫 Attention !! Your Energy Is Running Out \n";
             echo $red2 . "⚡ complete the shortlink on the website" . $y2 . "\n";
             exit;
