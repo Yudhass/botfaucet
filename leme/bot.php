@@ -157,6 +157,20 @@ function timer($tmr)
     endwhile;
 }
 
+function sisaWaktu($durasi) {
+    $jam = floor($durasi / 3600);
+    $menit = floor(($durasi % 3600) / 60);
+    $detik = $durasi % 60;
+    
+    if ($jam > 0) {
+        return "$jam jam $menit menit $detik detik";
+    } elseif ($menit > 0) {
+        return "$menit menit $detik detik";
+    } else {
+        return "$detik detik";
+    }
+}
+
 function get($url)
 {
     return curl($url, null, head())[1];
@@ -378,7 +392,7 @@ if ($pilih == 1) {
         $xrp = explode('</td>', explode('<td>', $db)[34])[0];
         $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
 
-        echo $purple2 . "$termux" . $green . " UPDATE BALANCE\n";
+        echo $purple2 . "$termux" . $green . " UPDATE BALANCE | SISA WAKTU " . sisaWaktu($durasi) . " | " . host;
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         echo $lblue2."$ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
         echo"\n";
