@@ -321,7 +321,7 @@ echo $yellow."$dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2.
 echo"\n";
 echo $lblue."$usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
 echo"\n";
-echo $abu2."$dash".$putih2."$abu2 $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
+echo $Icyan."$dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
 echo"\n";
 echo $IYellow."$zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
 echo"\n";
@@ -404,7 +404,7 @@ if ($pilih == 1) {
         echo"\n";
         echo $lblue."$usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
         echo"\n";
-        echo $abu2."$dash".$putih2."$abu2 $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
+        echo $Icyan."$dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
         echo"\n";
         echo $IYellow."$zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
         echo"\n";
