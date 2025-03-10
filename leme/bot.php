@@ -114,10 +114,12 @@ function Save($namadata)
     if (file_exists($namadata)) {
         $data = file_get_contents($namadata);
     } else {
-        // bn();
-        an($lblue2."Your Email Faucetpay"."\n");
-        fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
+        $lblue2 = "\033[1;36m";
+        $end = "\033[0m";
+        
+        an($lblue2 . " Your Email Faucetpay" . "\n");
         $data = readline(p . " Input " . $namadata . " : " . h);
+        fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         file_put_contents($namadata, $data);
     }
     return $data;
@@ -240,8 +242,8 @@ const
     host = "lemeclaim.xyz",
     login = "https://lemeclaim.xyz/index.php",
     logver = "https://lemeclaim.xyz/check.php",
-    dashboard = "https://lemeclaim.xyz/home.php?LTC=1&DOGE=1&DGB=1&TRX=1&USDT=1&BCH=1&DASH=1&FEY=1&ZEC=1&SOL=1&BNB=1&XRP=1&redirect=1",
-    verif = "https://lemeclaim.xyz/home.php?LTC=1&DOGE=1&DGB=1&TRX=1&USDT=1&BCH=1&DASH=1&FEY=1&ZEC=1&SOL=1&BNB=1&XRP=1&redirect=1",
+    dashboard = "https://lemeclaim.xyz/home.php?LTC=0&DOGE=1&DGB=1&TRX=1&USDT=1&BCH=0&DASH=1&FEY=1&ZEC=1&SOL=0&BNB=0&XRP=1&redirect=1",
+    verif = "https://lemeclaim.xyz/home.php?LTC=0&DOGE=1&DGB=1&TRX=1&USDT=1&BCH=0&DASH=1&FEY=1&ZEC=1&SOL=0&BNB=0&XRP=1&redirect=1",
     wd = "https://lemeclaim.xyz/account.php",
     wdver = "https://lemeclaim.xyz/account.php",
     url = "https://lemeclaim.xyz";
@@ -280,8 +282,8 @@ gas:
 // bn(host, 1);
 menu:
 $db = get(wd);
-$ltc = explode('</td>', explode('<td>', $db)[1])[0];
-$ltc2 = explode('</td>', explode('<td>', $db)[2])[0];
+
+// ltc
 
 $doge = explode('</td>', explode('<td>', $db)[4])[0];
 $doge2 = explode('</td>', explode('<td>', $db)[5])[0];
@@ -295,8 +297,7 @@ $trx2 = explode('</td>', explode('<td>', $db)[11])[0];
 $usdt = explode('</td>', explode('<td>', $db)[13])[0];
 $usdt2 = explode('</td>', explode('<td>', $db)[14])[0];
 
-$bch = explode('</td>', explode('<td>', $db)[16])[0];
-$bch2 = explode('</td>', explode('<td>', $db)[17])[0];
+// bch
 
 $dash = explode('</td>', explode('<td>', $db)[19])[0];
 $dash2 = explode('</td>', explode('<td>', $db)[20])[0];
@@ -307,11 +308,9 @@ $fey2 = explode('</td>', explode('<td>', $db)[23])[0];
 $zec = explode('</td>', explode('<td>', $db)[25])[0];
 $zec2 = explode('</td>', explode('<td>', $db)[26])[0];
 
-$sol = explode('</td>', explode('<td>', $db)[28])[0];
-$sol2 = explode('</td>', explode('<td>', $db)[29])[0];
+// sol
 
-$bnb = explode('</td>', explode('<td>', $db)[31])[0];
-$bnb2 = explode('</td>', explode('<td>', $db)[32])[0];
+// bnb
 
 $xrp = explode('</td>', explode('<td>', $db)[34])[0];
 $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
@@ -320,17 +319,13 @@ an($lblue2." Welcome Back Bossque 😎"."\n");
 an($lblue2." Your Balance"."\n");
 an($lblue2." Host ". host."\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
+echo $lblue2." $zec".$putih2."$lblue2  $zec2";  echo $green2."     $doge".$putih2."$green2  $doge2";
 echo"\n";
 echo $yellow." $dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
 echo"\n";
-echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
+echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $xrp".$putih2."$cyan   $xrp2";
 echo"\n";
 echo $Icyan." $dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
-echo"\n";
-echo $IYellow." $zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
-echo"\n";
-echo $purple2." $bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
 echo"\n";
 
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
@@ -363,8 +358,7 @@ if ($pilih == 1) {
         }
         $db = get(wd);
         
-        $ltc = explode('</td>', explode('<td>', $db)[1])[0];
-        $ltc2 = explode('</td>', explode('<td>', $db)[2])[0];
+        // ltc
 
         $doge = explode('</td>', explode('<td>', $db)[4])[0];
         $doge2 = explode('</td>', explode('<td>', $db)[5])[0];
@@ -378,8 +372,7 @@ if ($pilih == 1) {
         $usdt = explode('</td>', explode('<td>', $db)[13])[0];
         $usdt2 = explode('</td>', explode('<td>', $db)[14])[0];
 
-        $bch = explode('</td>', explode('<td>', $db)[16])[0];
-        $bch2 = explode('</td>', explode('<td>', $db)[17])[0];
+        // bch
 
         $dash = explode('</td>', explode('<td>', $db)[19])[0];
         $dash2 = explode('</td>', explode('<td>', $db)[20])[0];
@@ -390,11 +383,9 @@ if ($pilih == 1) {
         $zec = explode('</td>', explode('<td>', $db)[25])[0];
         $zec2 = explode('</td>', explode('<td>', $db)[26])[0];
 
-        $sol = explode('</td>', explode('<td>', $db)[28])[0];
-        $sol2 = explode('</td>', explode('<td>', $db)[29])[0];
+        // sol
 
-        $bnb = explode('</td>', explode('<td>', $db)[31])[0];
-        $bnb2 = explode('</td>', explode('<td>', $db)[32])[0];
+        // bnb
 
         $xrp = explode('</td>', explode('<td>', $db)[34])[0];
         $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
@@ -403,28 +394,16 @@ if ($pilih == 1) {
         echo $purple2 . " $kh" . $green . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
         echo $purple2 . " $bh" . $green . " HOST " . host . "\n";
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        echo $lblue2." $ltc".$putih2."$lblue2  $ltc2";  echo $green2."     $doge".$putih2."$green2  $doge2";
+        echo $lblue2." $zec".$putih2."$lblue2  $zec2";  echo $green2."     $doge".$putih2."$green2  $doge2";
         echo"\n";
         echo $yellow." $dgb".$putih2."$yellow  $dgb2";  echo $purple."     $trx".$putih2."$purple   $trx2";
         echo"\n";
-        echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $bch".$putih2."$cyan   $bch2";
+        echo $lblue." $usdt".$putih2."$lblue $usdt2";  echo $cyan."     $xrp".$putih2."$cyan   $xrp2";
         echo"\n";
         echo $Icyan." $dash".$putih2."$Icyan $dash2";  echo $red2."     $fey".$putih2."$red2   $fey2";
         echo"\n";
-        echo $IYellow." $zec".$putih2."$IYellow  $zec2";  echo $IRed."     $sol".$putih2."$IRed   $sol2";
-        echo"\n";
-        echo $purple2." $bnb".$putih2."$purple2  $bnb2";  echo $IGreen."     $xrp".$putih2."$IGreen   $xrp2";
-        echo"\n";
 
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        if ($ltc2 > "1.00000000") {
-            $link = get(wd);
-            $data = "ltc=withdraw";
-            $wd = post(wd, $data);
-            echo "{$y2} SUCCES SEND $ltc2 $ltc TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
         if ($doge2 > "1.00000000") {
             $link = get(wd);
             $data = "doge=withdraw";
@@ -457,14 +436,6 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($bch2 > "1.00000000") {
-            $link = get(wd);
-            $data = "bch=withdraw";
-            $wd = post(wd, $data);
-            echo "{$purple2} SUCCES SEND $bch2 $bch TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
         if ($dash2 > "1.00000000") {
             $link = get(wd);
             $data = "dash=withdraw";
@@ -486,22 +457,6 @@ if ($pilih == 1) {
             $data = "zec=withdraw";
             $wd = post(wd, $data);
             echo "{$green2} SUCCES SEND $zec2 $zec TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
-        if ($sol2 > "1.00000000") {
-            $link = get(wd);
-            $data = "sol=withdraw";
-            $wd = post(wd, $data);
-            echo "{$putih2} SUCCES SEND $sol2 $sol TO FAUCETPAY\n";
-            fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        } else {
-        }
-        if ($bnb2 > "1.00000000") {
-            $link = get(wd);
-            $data = "bnb=withdraw";
-            $wd = post(wd, $data);
-            echo "{$putih2} SUCCES SEND $bnb2 $bnb TO FAUCETPAY\n";
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }

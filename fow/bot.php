@@ -240,8 +240,8 @@ const
     host = "fowcy.xyz",
     login = "https://fowcy.xyz",
     logver = "https://fowcy.xyz/check.php",
-    dashboard = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=1&DASH=1&FEY=1&ZEC=1&SOL=1&XRP=1&ADA=1&TON=1&redirect=1",
-    verif = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=1&DASH=1&FEY=1&ZEC=1&SOL=1&XRP=1&ADA=1&TON=1&redirect=1",
+    dashboard = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=0&DASH=1&FEY=1&ZEC=1&SOL=0&XRP=1&ADA=1&TON=1&redirect=1",
+    verif = "https://fowcy.xyz/home.php?DOGE=1&DGB=1&TRX=1&USDT=1&MATIC=0&DASH=1&FEY=1&ZEC=1&SOL=0&XRP=1&ADA=1&TON=1&redirect=1",
     wd = "https://fowcy.xyz/account.php",
     wdver = "https://fowcy.xyz/account.php",
     url = "https://fowcy.xyz";
