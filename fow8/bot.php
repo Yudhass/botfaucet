@@ -345,12 +345,13 @@ if ($pilih == 1) {
         $faucet = get(dashboard);
         $explodeResult = explode('clock.setTime(', $faucet);
         
+        $durasi = 0;
         if (isset($explodeResult[1])) {
             $durasi = explode(");", $explodeResult[1])[0];
+            timer(60);
         } else {
             $durasi = 0; // Default jika tidak ditemukan
         }
-        timer(60);
 
         if ($durasi == 0) {
             echo $red2 . "🚫 Attention !! Your Energy Is Running Out \n";
