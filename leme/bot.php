@@ -428,7 +428,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($usdt2 == "1.00000000") {
+        if ($usdt2 > "0.10000000") {
             $link = get(wd);
             $data = "usdt=withdraw";
             $wd = post(wd, $data);
@@ -436,7 +436,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($dash2 > "0.10000000") {
+        if ($dash2 > "0.00010000") {
             $link = get(wd);
             $data = "dash=withdraw";
             $wd = post(wd, $data);
@@ -452,7 +452,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($zec2 > "0.10000000") {
+        if ($zec2 > "0.00010000") {
             $link = get(wd);
             $data = "zec=withdraw";
             $wd = post(wd, $data);
@@ -460,7 +460,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($xrp2 > "0.10000000") {
+        if ($xrp2 > "0.00100000") {
             $link = get(wd);
             $data = "xrp=withdraw";
             $wd = post(wd, $data);
