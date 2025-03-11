@@ -318,6 +318,7 @@ $xrp2 = explode('</td>', explode('<td>', $db)[35])[0];
 an($lblue2." Welcome Back Bossque 😎"."\n");
 an($lblue2." Your Balance"."\n");
 an($lblue2." Host ". host."\n");
+an($lblue2." Email ". $email."\n");
 fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
 echo $lblue2." $zec".$putih2."$lblue2  $zec2";  echo $green2."     $doge".$putih2."$green2  $doge2";
 echo"\n";
@@ -393,6 +394,7 @@ if ($pilih == 1) {
         echo $purple2 . " $hh" . $green . " UPDATE BALANCE \n";
         echo $purple2 . " $kh" . $yellow . " SISA WAKTU " . sisaWaktu($durasi) . "\n";
         echo $purple2 . " $bh" . $lblue2 . " HOST " . host . "\n";
+        echo $purple2 . " $uh" . $lblue2 . " Email " . $email . "\n";
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         echo $lblue2." $zec".$putih2."$lblue2  $zec2";  echo $green2."     $doge".$putih2."$green2  $doge2";
         echo"\n";
