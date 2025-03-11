@@ -404,7 +404,7 @@ if ($pilih == 1) {
         echo"\n";
 
         fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
-        if ($doge2 > "1.00000000") {
+        if ($doge2 > "0.10000000") {
             $link = get(wd);
             $data = "doge=withdraw";
             $wd = post(wd, $data);
@@ -412,7 +412,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($dgb2 > "1.00000000") {
+        if ($dgb2 > "0.10000000") {
             $link = get(wd);
             $data = "dgb=withdraw";
             $wd = post(wd, $data);
@@ -420,7 +420,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($trx2 > "1.00000000") {
+        if ($trx2 > "0.10000000") {
             $link = get(wd);
             $data = "trx=withdraw";
             $wd = post(wd, $data);
@@ -436,7 +436,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($dash2 > "1.00000000") {
+        if ($dash2 > "0.10000000") {
             $link = get(wd);
             $data = "dash=withdraw";
             $wd = post(wd, $data);
@@ -444,7 +444,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($fey2 > "1.00000000") {
+        if ($fey2 > "0.10000000") {
             $link = get(wd);
             $data = "fey=withdraw";
             $wd = post(wd, $data);
@@ -452,7 +452,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($zec2 > "1.00000000") {
+        if ($zec2 > "0.10000000") {
             $link = get(wd);
             $data = "zec=withdraw";
             $wd = post(wd, $data);
@@ -460,7 +460,7 @@ if ($pilih == 1) {
             fast($lblue2 . "────────────────────────────────────────" . $end . "\n");
         } else {
         }
-        if ($xrp2 > "1.00000000") {
+        if ($xrp2 > "0.10000000") {
             $link = get(wd);
             $data = "xrp=withdraw";
             $wd = post(wd, $data);
