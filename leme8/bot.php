@@ -240,13 +240,13 @@ const
     t = "\t",
     r = "                  \r",
     host = "lemeclaim.xyz",
-    login = "https://lemeclaim.xyz/index.php",
+    login = "https://lemeclaim.xyz?r=17578",
     logver = "https://lemeclaim.xyz/check.php",
     dashboard = "https://lemeclaim.xyz/home.php?LTC=0&DOGE=1&DGB=1&TRX=1&USDT=1&BCH=0&DASH=1&FEY=1&ZEC=1&SOL=0&BNB=0&XRP=1&redirect=1",
     verif = "https://lemeclaim.xyz/home.php?LTC=0&DOGE=1&DGB=1&TRX=1&USDT=1&BCH=0&DASH=1&FEY=1&ZEC=1&SOL=0&BNB=0&XRP=1&redirect=1",
     wd = "https://lemeclaim.xyz/account.php",
     wdver = "https://lemeclaim.xyz/account.php",
-    url = "https://lemeclaim.xyz";
+    url = "https://lemeclaim.xyz?r=17578";
 
 
 log:
