@@ -131,7 +131,7 @@ function fast($str)
     $rar = str_split($str);
     foreach ($rar as $zz) {
         echo $zz;
-        usleep(3000);
+        // usleep(3000);
     }
 }
 
