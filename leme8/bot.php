@@ -139,7 +139,7 @@ function an($str)
     $arr = str_split($str);
     foreach ($arr as $az) {
         echo $az;
-        usleep(19999);
+        // usleep(19999);
     }
 }
 
