@@ -1,0 +1,30 @@
+
+
+\\** CARA MEMGGUNAKAN **/
+=========================
+
+Ketik perintah di Bawah ini:
+============================
+
+/*untuk menjalankan scrip harap install bahan² dibawah ini*\
+
+$~ pkg update -y && pkg upgrade -y
+$~ termux-setup-storage
+$~ pkg install php
+$~ pkg install imagemagick
+$~ pkg install tesseract
+$~ cd /sdcard/lokasi dimana kalian menyimpan file bot.php ( Contoh: cd /sdcard/earn )
+
+Untuk mengambil cookie bisa menggunakan Apps => Smart-Cookies, Kiwi Browser , Http Cannary, DLL 
+=======================================
+
+Lalu jalankan bot nya
+
+ketik perintah
+
+$~ php bot.php
+==============
+
+Apikey Gratis  ⬇️
+ApiKey=> NGXTb7UqWDrvbSmUXZZm1b1RjKSNgTpaKZ
+
